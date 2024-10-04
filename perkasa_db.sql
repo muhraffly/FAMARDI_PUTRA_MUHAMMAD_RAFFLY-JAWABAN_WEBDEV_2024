@@ -315,6 +315,155 @@ ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_
 
 
 --
+-- Data for Name: departments; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.departments (id, name, created_at, updated_at) FROM stdin;
+1	Information Technology	2024-10-04 21:36:25	2024-10-04 21:36:25
+2	Human Capital	2024-10-04 21:36:25	2024-10-04 21:36:25
+3	Finance and Accounting	2024-10-04 21:36:25	2024-10-04 21:36:25
+\.
+
+
+--
+-- Data for Name: employees; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.employees (id, name, departmentid, created_at, updated_at) FROM stdin;
+1	Budi	1	2024-10-04 21:36:30	2024-10-04 21:36:30
+2	Iwan	2	2024-10-04 21:36:30	2024-10-04 21:36:30
+3	Susi	3	2024-10-04 21:36:30	2024-10-04 21:36:30
+4	Amir	1	2024-10-04 21:36:30	2024-10-04 21:36:30
+5	Primus	1	2024-10-04 21:36:30	2024-10-04 21:36:30
+6	Tuti	2	2024-10-04 21:36:30	2024-10-04 21:36:30
+7	Sinta	2	2024-10-04 21:36:30	2024-10-04 21:36:30
+8	Santi	3	2024-10-04 21:36:30	2024-10-04 21:36:30
+9	Badu	3	2024-10-04 21:36:30	2024-10-04 21:36:30
+10	Marfu'ah	3	2024-10-04 21:36:30	2024-10-04 21:36:30
+\.
+
+
+--
+-- Data for Name: failed_jobs; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.failed_jobs (id, uuid, connection, queue, payload, exception, failed_at) FROM stdin;
+\.
+
+
+--
+-- Data for Name: migrations; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.migrations (id, migration, batch) FROM stdin;
+1	2014_10_12_000000_create_users_table	1
+2	2014_10_12_100000_create_password_reset_tokens_table	1
+3	2019_08_19_000000_create_failed_jobs_table	1
+4	2019_12_14_000001_create_personal_access_tokens_table	1
+5	2024_10_04_140933_create_departments_table	1
+6	2024_10_04_142248_create_employees_table	1
+7	2024_10_04_142936_create_spendings_table	1
+\.
+
+
+--
+-- Data for Name: password_reset_tokens; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.password_reset_tokens (email, token, created_at) FROM stdin;
+\.
+
+
+--
+-- Data for Name: personal_access_tokens; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.personal_access_tokens (id, tokenable_type, tokenable_id, name, token, abilities, last_used_at, expires_at, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Data for Name: spendings; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.spendings (employee_id, date, value, created_at, updated_at) FROM stdin;
+1	2020-03-04	3000000	2024-10-04 21:36:36	2024-10-04 21:36:36
+4	2020-04-06	9826000	2024-10-04 21:36:36	2024-10-04 21:36:36
+5	2020-04-06	43879200	2024-10-04 21:36:36	2024-10-04 21:36:36
+4	2020-09-08	8983400	2024-10-04 21:36:36	2024-10-04 21:36:36
+6	2020-12-06	2425600	2024-10-04 21:36:36	2024-10-04 21:36:36
+7	2021-04-02	879200	2024-10-04 21:36:36	2024-10-04 21:36:36
+2	2021-04-02	68892340	2024-10-04 21:36:36	2024-10-04 21:36:36
+3	2021-05-01	3500000	2024-10-04 21:36:36	2024-10-04 21:36:36
+3	2021-07-03	567800	2024-10-04 21:36:36	2024-10-04 21:36:36
+4	2021-07-03	6786730	2024-10-04 21:36:36	2024-10-04 21:36:36
+8	2021-08-02	7893400	2024-10-04 21:36:36	2024-10-04 21:36:36
+3	2021-10-03	8200450	2024-10-04 21:36:36	2024-10-04 21:36:36
+1	2021-12-23	8982300	2024-10-04 21:36:36	2024-10-04 21:36:36
+2	2022-02-03	334890	2024-10-04 21:36:36	2024-10-04 21:36:36
+5	2022-04-06	2342460	2024-10-04 21:36:36	2024-10-04 21:36:36
+2	2022-04-11	78923400	2024-10-04 21:36:36	2024-10-04 21:36:36
+6	2022-11-05	23244600	2024-10-04 21:36:36	2024-10-04 21:36:36
+3	2022-11-05	32324900	2024-10-04 21:36:36	2024-10-04 21:36:36
+6	2023-01-03	5500100	2024-10-04 21:36:36	2024-10-04 21:36:36
+5	2023-03-27	2342350	2024-10-04 21:36:36	2024-10-04 21:36:36
+5	2023-04-02	2423400	2024-10-04 21:36:36	2024-10-04 21:36:36
+\.
+
+
+--
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.users (id, fullname, username, password, role, created_at, updated_at) FROM stdin;
+1	Famardi Putra Muhammad Raffly	muhammdraffly	$2y$12$BuJxRGnLwOZjGTacZUiwUuenEsmLo9BrWMuKV7egyz.b4MXAKDtO2	ADMIN	2024-10-04 14:37:28	2024-10-04 14:37:28
+2	Muhammad Arifin	arifin82	$2y$12$TR2kc21kTrlAaJ31mg2DoumPAtjzQUAtNyoShi6J22f8xO8iDxvv2	USER	2024-10-04 14:59:47	2024-10-04 14:59:47
+\.
+
+
+--
+-- Name: departments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.departments_id_seq', 1, false);
+
+
+--
+-- Name: employees_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.employees_id_seq', 1, false);
+
+
+--
+-- Name: failed_jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.failed_jobs_id_seq', 1, false);
+
+
+--
+-- Name: migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.migrations_id_seq', 7, true);
+
+
+--
+-- Name: personal_access_tokens_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.personal_access_tokens_id_seq', 1, false);
+
+
+--
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.users_id_seq', 2, true);
+
+
+--
 -- Name: departments departments_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
