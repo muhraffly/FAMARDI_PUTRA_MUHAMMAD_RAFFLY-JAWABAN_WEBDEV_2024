@@ -1,0 +1,27 @@
+:root {
+    --mainColor: #0C843C;
+    --secondaryColor: #53B34B;
+    --accentColor: #CBD344;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.employee {
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.department {
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.spending {
+    padding: 50px;
+    margin-top: 50px;
+}
